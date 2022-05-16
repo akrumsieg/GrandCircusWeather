@@ -1,3 +1,4 @@
 <app-header></app-header>
-<app-form></app-form>
+<app-form (search)="getCurrentWeather($event)"></app-form>
 <app-result></app-result>
+<h1>{{currentWeatherDetails.description}}</h1>
