@@ -1,5 +1,8 @@
-<h3>CityName</h3>
-<p>Conditions: cloudy with a chance of meatballs</p>
-<p>Current Temperature: 154*F</p>
-<p>Feels Like: 2,000*F</p>
-<p>Wind: 90mph SW</p>
+<div *ngIf="weatherApiResponse">
+    <h3>{{weatherDetails.cityName}}</h3>
+    <p>Conditions: {{weatherDetails.description}}</p>
+    <p>Current Temperature: {{weatherDetails.temperature}}</p>
+    <p>Feels Like: {{weatherDetails.feelsLike}}</p>
+    <p>Humidity: {{weatherDetails.humidity}}</p>
+    <p>Wind: {{weatherDetails.windSpeed}}</p>
+</div>

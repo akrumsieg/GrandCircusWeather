@@ -17,10 +17,8 @@ export class WeatherService {
   weatherObservable: Observable<any> = new Observable;
 
   getCurrentWeather(cityName: string): Observable<WeatherApiResponse> {
-    console.log('service get was called');
     return this.http.get<WeatherApiResponse>(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${environment.apiKey}`)
       .pipe();
-    //this.weatherObservable.subscribe(x => console.log(x.main));
   }
 
 }

@@ -9,16 +9,12 @@ export class FormComponent implements OnInit {
 
   @Output() search = new EventEmitter<string>();
 
-  //cityName: string = '';
-
   searchWeather(cityName: string) {
     this.search.emit(cityName);
-    console.log(cityName);
   }
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() { }
 
 }
